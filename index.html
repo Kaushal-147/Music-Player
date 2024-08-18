@@ -6,9 +6,38 @@
     <link rel="stylesheet" href="output.css">
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen bg-gradient-to-tr from-[#a3a765fe] to-[#d472ca]">
-    <div class="bg"></div>
-    
+<body class="min-h-screen bg-gradient-to-tr from-[#babab2d0] to-[#938391ac] flex justify-center items-center ">
+
+
+    <div class="bg-white rounded-lg h-[33rem] w-[25rem] music-player flex flex-col" id="main">
+
+        <div class="song p-[1rem] flex justify-center items-center flex-col space-y-[2rem]">
+            <img src="https://i.ytimg.com/vi/WTv-dfyhsJg/maxresdefault.jpg" alt="song image" class="image" id="1">
+            <span class="font-semibold">
+                Song : Zara Zara
+            </span>
+        </div>
+
+        <div class="progressBar flex justify-center items-center flex-row space-x-[1rem] pr-[1.2rem] mt-[3rem]">
+            <audio id="audio" cotrols>
+                <source src="songs/zara zara.mp3">
+            </audio>
+            <span id="time" ></span>
+            <input type="range"  id="bar" class="accent-black h-[0.3125rem] appearance-none w-[100%] cursor-pointer bg-gray-200 active:outline-none outline-none">
+        </div>
+
+        <div class="btns flex flex-row  items-center justify-evenly mt-[1.2rem] ">
+            <div class="previous hover:bg-[#eae8e8d3] rounded-full w-[4rem] h-[4rem] flex items-center justify-center"><img src="./images/backward.png" class=" h-[2rem] w-auto "></div>
+            <div class=" hover:bg-[#eae8e8d3] rounded-full w-[4.5rem] h-[4.5rem] flex items-center justify-center">
+                <div class="playPause" id="play"><img src="./images/play.png" class="h-[1.9rem] w-auto ml-[0.3rem]" onclick="toogle()" ></div>
+                <div class="playPause hidden" id="pause"><img src="./images/pause.png" class="h-[2rem] w-auto" onclick="toogle()" ></div>
+                <div class="replay hidden" id="replay"><img src="./images/replay.png" class="h-[2.75rem] w-auto" onclick="toogle()" ></div>
+            </div>
+            <div class="next hover:bg-[#eae8e8d3] rounded-full w-[4rem] h-[4rem] flex items-center justify-center"><img src="./images/next.png" class="h-[2rem] w-auto" ></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
